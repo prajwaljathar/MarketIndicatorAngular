@@ -1,0 +1,7 @@
+<!-- src/app/payment-gateway/payment-gateway.component.html -->
+<div class="offers-container">
+    <h1>Select a Payment Offer</h1>
+    <div *ngFor="let offer of offers" class="offer-card" (click)="selectOffer(offer)">
+      <p>{{offer.tokens}} Tokens for ₹{{offer.price}}</p>
+    </div>
+  </div>

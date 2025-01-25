@@ -1,0 +1,25 @@
+<!-- src/app/payment-page/payment-page.component.html -->
+
+<!-- <div class="payment-container" *ngIf="offer">
+    <h1>Complete Your Payment</h1>
+    <p>You have selected {{offer.tokens}} tokens for ₹{{offer.price}}</p>
+    <button (click)="makePayment('Google Pay')">Pay with Google Pay</button>
+    <button (click)="makePayment('PhonePe')">Pay with PhonePe</button>
+    <button (click)="makePayment('Paytm')">Pay with Paytm</button>
+  </div> -->
+
+  <div class="payment-container" *ngIf="offer">
+    <h1>Complete Your Payment</h1>
+    <p>You have selected {{offer.tokens}} tokens for ₹{{offer.price}}</p>
+    
+    <button (click)="makePayment('Google Pay')">Pay with Google Pay</button>
+    <button (click)="makePayment('PhonePe')">Pay with PhonePe</button>
+    <button (click)="makePayment('Paytm')">Pay with Paytm</button>
+  
+    <!-- Display scanner image after a provider is selected -->
+    <div *ngIf="selectedProvider" class="scanner-container">
+      <h2>Scan with {{selectedProvider}}</h2>
+      <img src="assets/qr.png" alt="Scanner" class="scanner-image" />
+    </div>
+  </div>
+  
